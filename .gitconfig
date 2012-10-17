@@ -1,0 +1,28 @@
+[user]
+	name = Mathias Leimgruber
+	email = m.leimgruber@4teamwork.ch
+[merge]
+	tool = opendiff
+
+[core]
+	editor = vim
+	excludesfile = /Users/maethu/.gitignore_global
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[branch]
+	autosetuprebase = always
+
+[format]
+        pretty = %C(blue)%h%Creset %s %C(green)%d%Creset [%C(red)%an%Creset, %C(cyan)%cr%Creset] %C(bold reverse)%N%Creset
+
+[rerere]
+enabled = 1
+
+[alias]
+  weburl = !git config --get remote.origin.url | sed -e 's/git@github.com:/https:\\/\\/github.com\\//' -e 's/\\.git$//' -e 's/gitolite@git.4teamwork.ch:\\(.*\\)/https:\\/\\/git.4teamwork.ch\\/?p=\\1.git/'
+  browse = !open `git weburl`
+jenkins = !basename `pwd` | sed -e 's/^/https:\\/\\/jenkins.4teamwork.ch\\/search\\/?q=/' | xargs open
+
