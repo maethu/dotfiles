@@ -1,0 +1,46 @@
+
+autoload -U promptinit colors && colors
+promptinit
+
+prompt walters
+
+PS1='%{$fg[black]%}%B%n%b@%U%m%u%{$reset_color%}$(git_branch_prompt)%{$fg[blue]%}%%>%{$reset_color%} '
+
+setopt promptsubst
+
+fpath=(~/dotfiles/zsh/functions $fpath)
+autoload -U ~/dotfiles/zsh/functions/*(:t)
+
+# This will set the default prompt to the walters theme
+#prompt walters
+
+#change directory without cd
+setopt autocd
+
+
+# HISTORY
+
+HISTSIZE=3000
+SAVEHIST=3000
+HISTFILE=~/.zsh_history
+
+
+# exports
+
+export PATH=/Users/maethu/bin:/opt/local/bin:/opt/local/sbin:$PATH
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# colored
+export CLICOLOR_FORCE=1
+export CLICOLOR=1
+export TERM=xterm-color
+
+
+#key bindings
+
+bindkey "^R"      history-incremental-search-backward  # ctrl-r
+bindkey "^[[1;2D" backward-word # Shift-LeftArrow
+bindkey "^[[1;2C" forward-word # Shift-RightArrow
+bindkey "^J" self-insert # Shift-Enter for \n

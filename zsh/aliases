@@ -1,0 +1,25 @@
+# Normal aliases
+alias ll='ls -lsah'
+alias grep='grep --color'
+alias tarx="tar -zxvf"
+alias tarc="tar -pczf"
+alias rmsvn="find . -name .svn -type d -exec rm -r {} \;"
+alias pcp="pwd | pbcopy"
+
+
+# svn
+alias ss="svn st | grep -v '^Performing' | grep -v '^$'"
+alias ssm="svn st | grep -v '^Performing' | grep -v '^$' | grep -v '^X'"
+export SVN_EDITOR=vim
+
+#python
+alias eggdist='python2.4 setup.py mregister sdist bdist_egg mupload -r '
+
+
+# git
+alias gl="git log --graph"
+alias gd="git diff --color"
+alias gdf="git diff --color --cached"
+alias gdr="git diff --raw --color --cached"
+alias gp="git pull --rebase"
+alias gco="git checkout"
