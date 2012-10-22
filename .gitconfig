@@ -3,6 +3,7 @@
 	email = m.leimgruber@4teamwork.ch
 [merge]
 	tool = opendiff
+        ff = false
 
 [core]
 	editor = vim
@@ -26,3 +27,5 @@ enabled = 1
   browse = !open `git weburl`
 jenkins = !basename `pwd` | sed -e 's/^/https:\\/\\/jenkins.4teamwork.ch\\/search\\/?q=/' | xargs open
 
+[color]
+	ui = true
