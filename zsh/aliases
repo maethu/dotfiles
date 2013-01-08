@@ -23,3 +23,7 @@ alias gdf="git diff --color --cached"
 alias gdr="git diff --raw --color --cached"
 alias gp="git pull --rebase"
 alias gco="git checkout"
+
+# editor
+alias en="subl -e ."
+alias es="subl"
