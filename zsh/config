@@ -8,6 +8,7 @@ PS1='%{$fg[black]%}%B%n%b@%U%m%u%{$reset_color%}$(git_branch_prompt)%{$fg[blue]%
 
 setopt promptsubst
 
+# load functions
 fpath=(~/dotfiles/zsh/functions $fpath)
 autoload -U ~/dotfiles/zsh/functions/*(:t)
 
@@ -44,3 +45,6 @@ bindkey "^R"      history-incremental-search-backward  # ctrl-r
 bindkey "^[[1;2D" backward-word # Shift-LeftArrow
 bindkey "^[[1;2C" forward-word # Shift-RightArrow
 bindkey "^J" self-insert # Shift-Enter for \n
+
+#ruby
+eval "$(rbenv init -)"
