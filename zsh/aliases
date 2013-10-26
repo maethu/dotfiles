@@ -27,3 +27,9 @@ alias gco="git checkout"
 # editor
 alias en="subl -e ."
 alias es="subl"
+
+#mail
+alias fakemail="~/bin/python27-plone ~/bin/fakemail.py --host=localhost --port=8025 --path=/tmp --open"
+
+#simple http
+alias http="python -m SimpleHTTPServer"
