@@ -25,11 +25,15 @@ alias gp="git pull --rebase"
 alias gco="git checkout"
 
 # editor
-alias en="subl -e ."
-alias es="subl"
+alias en="subl3 -e ."
+alias es="subl3"
 
 #mail
 alias fakemail="~/bin/python27-plone ~/bin/fakemail.py --host=localhost --port=8025 --path=/tmp --open"
 
 #simple http
 alias http="python -m SimpleHTTPServer"
+
+
+# postgres
+alias pg="postgres -D /usr/local/var/postgres"
