@@ -13,8 +13,6 @@ alias ssm="svn st | grep -v '^Performing' | grep -v '^$' | grep -v '^X'"
 export SVN_EDITOR=vim
 
 #python
-alias eggdist='python2.4 setup.py mregister sdist bdist_egg mupload -r '
-
 
 # git
 alias gl="git log --graph"
@@ -25,11 +23,11 @@ alias gp="git pull --rebase"
 alias gco="git checkout"
 
 # editor
-alias en="subl3 -e ."
+alias en="subl3 ."
 alias es="subl3"
 
 #mail
-alias fakemail="~/bin/python27-plone ~/bin/fakemail.py --host=localhost --port=8025 --path=/tmp --open"
+alias fakemail="plone-python27 ~/bin/fakemail.py --host=localhost --port=8025 --path=/tmp --open"
 
 #simple http
 alias http="python -m SimpleHTTPServer"

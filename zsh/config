@@ -4,7 +4,7 @@ promptinit
 
 prompt walters
 
-PS1='%{$fg[black]%}%B%n%b@%U%m%u%{$reset_color%}$(git_branch_prompt)%{$fg[blue]%}%%>%{$reset_color%} '
+PS1='%{$fg[black]%}%B%n%b|%u%{$reset_color%}$(git_branch_prompt)%{$fg[blue]%}%%>%{$reset_color%} '
 
 setopt promptsubst
 
@@ -18,6 +18,8 @@ autoload -U ~/dotfiles/zsh/functions/*(:t)
 #change directory without cd
 setopt autocd
 
+# stty config
+stty icrnl
 
 # HISTORY
 
@@ -39,6 +41,9 @@ export CLICOLOR_FORCE=1
 export CLICOLOR=1
 export TERM=xterm-color
 
+# ftw.upgrade
+export UPGRADE_AUTHENTICATION=admin:admin
+
 
 #key bindings
 
@@ -48,4 +53,13 @@ bindkey "^[[1;2C" forward-word # Shift-RightArrow
 bindkey "^J" self-insert # Shift-Enter for \n
 
 #ruby
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+
+# OpenSSL
+export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openssl)/include"
+export LDFLAGS="${LDFLAGS} -L$(brew --prefix openssl)/lib"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+

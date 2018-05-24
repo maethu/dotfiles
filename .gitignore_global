@@ -12,16 +12,16 @@ downloads
 eggs
 fake-eggs
 parts
-dist
-src
 .installed.cfg
 .mr.developer.cfg
 .hg
 .bzr
 .svn
+.ruby-version
 *.pyc
 *.pyo
-*.tmp*
+*.tmp
+*.sublime-project
 
 # OS generated files #
 ######################
