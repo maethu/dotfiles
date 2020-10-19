@@ -21,13 +21,14 @@ alias gdf="git diff --color --cached"
 alias gdr="git diff --raw --color --cached"
 alias gp="git pull --rebase"
 alias gco="git checkout"
+alias remove_git_branches="git branch --merged master | grep -v 'master$' | xargs git branch -d"
 
 # editor
 alias en="subl3 ."
 alias es="subl3"
 
 #mail
-alias fakemail="plone-python27 ~/bin/fakemail.py --host=localhost --port=8025 --path=/tmp --open"
+alias fakemail="work-python ~/bin/fakemail.py --host=localhost --port=8025 --path=/tmp --open"
 
 #simple http
 alias http="python -m SimpleHTTPServer"

@@ -22,6 +22,15 @@ parts
 *.pyo
 *.tmp
 *.sublime-project
+include/
+lib/
+pip-selfcheck.json
+.vscode/
+.python-version
+pyvenv.cfg
+.eggs
+yarn.lock
+package-lock.json
 
 # OS generated files #
 ######################

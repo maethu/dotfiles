@@ -4,22 +4,19 @@ promptinit
 
 prompt walters
 
-PS1='%{$fg[black]%}%B%n%b|%u%{$reset_color%}$(git_branch_prompt)%{$fg[blue]%}%%>%{$reset_color%} '
+#PS1='%{$fg[black]%}%B%n%b|%u%{$reset_color%}$(git_branch_prompt)%{$fg[blue]%}%%>%{$reset_color%} '
 
 setopt promptsubst
 
 # load functions
-fpath=(~/dotfiles/zsh/functions $fpath)
-autoload -U ~/dotfiles/zsh/functions/*(:t)
-
-# This will set the default prompt to the walters theme
-#prompt walters
+# fpath=(~/dotfiles/zsh/functions $fpath)
+# autoload -U ~/dotfiles/zsh/functions/*(:t)
 
 #change directory without cd
 setopt autocd
 
 # stty config
-stty icrnl
+# stty icrnl
 
 # HISTORY
 
@@ -31,7 +28,6 @@ HISTFILE=~/.zsh_history
 # exports
 
 export PATH=/usr/local/bin:/Developer/usr/bin:/Users/maethu/bin:/opt/local/bin:/opt/local/sbin:$PATH
-
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -58,8 +54,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 
-# OpenSSL
-export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openssl)/include"
-export LDFLAGS="${LDFLAGS} -L$(brew --prefix openssl)/lib"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
