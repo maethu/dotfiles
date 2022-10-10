@@ -1,6 +1,6 @@
 [user]
 	name = Mathias Leimgruber
-	email = m.leimgruber@4teamwork.ch
+	email = m.leimgruber@webcloud7.ch
 [github]
     user = maethu
 [merge]
@@ -37,4 +37,3 @@ ssh = !open-ssh-by-git-remote
 [push]
 	default = current
 [init]
-	templatedir = ~/.git_template
